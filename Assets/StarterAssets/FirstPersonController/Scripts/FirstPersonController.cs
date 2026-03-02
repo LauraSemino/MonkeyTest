@@ -25,7 +25,7 @@ namespace StarterAssets
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
-		public float Gravity = -15.0f;
+		public float Gravity;
 
 		[Space(10)]
 		[Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
@@ -57,7 +57,7 @@ namespace StarterAssets
 		// player
 		private float _speed;
 		private float _rotationVelocity;
-		private float _verticalVelocity;
+		public float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
 
 		// timeout deltatime

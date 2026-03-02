@@ -7,6 +7,8 @@ public class ArmControl : MonoBehaviour
 {
     public GameObject hand;
     public CharacterController controller;
+    public FirstPersonController fpc;
+
     public float PullTimeout = 0.4f;
 
     private StarterAssetsInputs _input;
@@ -32,7 +34,18 @@ public class ArmControl : MonoBehaviour
             PullTimeout = 0.4f;
         }
 
+        if (hand.GetComponent<ArmCollide>().touchWall == true)
+        {
+            fpc._verticalVelocity = 0f;
+
+        }
+        else
+        {
+            
+        }
+
     }
+
     private void LateUpdate()
     {
        
