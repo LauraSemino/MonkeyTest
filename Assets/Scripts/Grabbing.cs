@@ -5,6 +5,7 @@ using UnityEngine.Windows;
 public class Grabbing : MonoBehaviour
 {
     private StarterAssetsInputs _input;
+    public Collider LGrab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +17,7 @@ public class Grabbing : MonoBehaviour
     {
         if (_input.lgrab == true)
         {
+           // if (LGrab.
             //do thing
         }
         else
