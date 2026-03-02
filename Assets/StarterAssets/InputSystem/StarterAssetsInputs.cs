@@ -9,7 +9,8 @@ namespace StarterAssets
 	{
 		[Header("Character Input Values")]
 		public Vector2 move;
-		public Vector2 look;
+        public Vector2 moveArm;
+        public Vector2 look;
 		public bool jump;
 		public bool sprint;
 		public bool lgrab;
@@ -27,8 +28,11 @@ namespace StarterAssets
 		{
 			MoveInput(value.Get<Vector2>());
 		}
-
-		public void OnLook(InputValue value)
+        public void OnMoveArm(InputValue value)
+        {
+            MoveArmInput(value.Get<Vector2>());
+        }
+        public void OnLook(InputValue value)
 		{
 			if(cursorInputForLook)
 			{
@@ -54,15 +58,20 @@ namespace StarterAssets
         {
             RGrabInput(value.isPressed);
         }
+        
 #endif
 
 
         public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
-		} 
+		}
+        public void MoveArmInput(Vector2 newMoveArmDirection)
+        {
+            moveArm = newMoveArmDirection;
+        }
 
-		public void LookInput(Vector2 newLookDirection)
+        public void LookInput(Vector2 newLookDirection)
 		{
 			look = newLookDirection;
 		}

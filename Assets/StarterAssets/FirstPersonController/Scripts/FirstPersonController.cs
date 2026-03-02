@@ -120,6 +120,7 @@ namespace StarterAssets
 		private void LateUpdate()
 		{
 			CameraRotation();
+			
 		}
 
 		private void GroundedCheck()
@@ -148,8 +149,11 @@ namespace StarterAssets
 
 				// rotate the player left and right
 				transform.Rotate(Vector3.up * _rotationVelocity);
-			}
+			
+			} 
 		}
+
+		
 
 		private void Move()
 		{
